@@ -125,6 +125,7 @@ We’ll be looking for:
 We’re excited to see how you approach this task. Good luck, and happy coding! :)
 
 ## Contact Info 
- - Name: Your full name
- - Contact number: Your contact number
- - Email Address: Your email address
+ - Name: Tanishk Patidar
+ - Contact number: 7805900291
+ - Portfolio:https://tanishk937.github.io/tanishk-portfolio/
+ - Email Address: tanishk.patidar.engineer@gmail.com
