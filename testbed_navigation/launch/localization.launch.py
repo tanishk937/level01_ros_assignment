@@ -43,13 +43,13 @@ def generate_launch_description():
             "--once",
             "/initialpose",
             "geometry_msgs/msg/PoseWithCovarianceStamped",
-            "{header: {frame_id: 'map'}, pose: {pose: {position: {x: -0.155, y: 4.828, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.2905, w: 0.9569}}, covariance: [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 999.0, 0.0, 0.0, 0.0, 999.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1]}}"
+            "{header: {frame_id: map}, pose: {pose: {position: {x: 0.0, y: 5.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: 0.0, w: 1.0}}, covariance: [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 999.0, 0.0, 0.0, 0.0, 999.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1]}}",
         ],
         output="screen",
     )
 
     delayed_initial_pose = TimerAction(
-        period=8.0,
+        period=5.0,
         actions=[initial_pose],
     )
 
