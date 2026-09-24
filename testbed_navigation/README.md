@@ -99,7 +99,7 @@ Example:
 
 ```bash
 ros2 topic pub -1 /initialpose geometry_msgs/msg/PoseWithCovarianceStamped \
-"{header: {frame_id: 'map'}, pose: {pose: {position: {x: -0.155, y: 4.828, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.2905, w: 0.9569}}, covariance: [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 999.0, 0.0, 0.0, 0.0, 999.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1]}}"
+"{header: {frame_id: 'map'}, pose: {pose: {position: {x: 0.0, y: 5.0, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.2905, w: 0.9569}}, covariance: [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 999.0, 0.0, 0.0, 0.0, 999.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1]}}"
 ```
 
 Run:
@@ -299,3 +299,21 @@ The following parts were verified:
 * A `NavigateToPose` goal completed with `SUCCEEDED`.
 
 The implementation keeps map loading, localization and navigation as separate launch files, while the individual Nav2 servers are started directly rather than using `nav2_bringup` as the main navigation launcher.
+
+## Evidence
+
+The final navigation setup was tested in Gazebo and RViz.
+
+### Screenshots
+
+* [RViz map and navigation setup](screenshots/01_rviz_map.png)
+* [Navigation goal reached successfully](screenshots/02_goal_reached.png)
+* [TF tree](screenshots/03_tf_tree.png)
+
+### Demo Video
+
+A complete navigation demonstration is included here:
+
+`final_test_vedio.webm`
+
+The demonstration shows the simulation, localization, navigation and successful goal completion.
